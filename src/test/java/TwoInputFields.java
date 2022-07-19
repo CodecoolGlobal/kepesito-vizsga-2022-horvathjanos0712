@@ -1,17 +1,15 @@
-
-import org.openqa.selenium.By;
+/*/import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+public class TwoInputFields extends SeleniumTest{
     WebDriver driver;
     WebDriverWait wait;
 
-    public BasePage(WebDriver driver, WebDriverWait wait) {
-        this.driver = driver;
-        this.wait = wait;
-    }
+    public TwoInputFields(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
 
+    }
     private final String urlBasic = "http://demo.seleniumeasy.com/basic-first-form-demo.html";
     private final By popupX = By.xpath("//*[@id=\"at-cv-lightbox-close\"]");
     private final By a = By.xpath("//*[@id=\"sum1\"]");
@@ -19,13 +17,6 @@ public class BasePage {
     private final By button = By.xpath("//*[@id=\"gettotal\"]/button");
     private final By result = By.xpath("//*[@id=\"displayvalue\"]");
 
-
-    public void navigateToBasic() {
-        driver.get(urlBasic);
-    }
-    public void clickX() {
-        driver.findElement(popupX).click();
-    }
     public void fillA() {
         driver.findElement(a).sendKeys("5");
     }
@@ -41,8 +32,11 @@ public class BasePage {
     }
 
 
+    public void navigateToBasic() {
+        driver.get(urlBasic);
+    }
 
-
-
-
-}
+    public void clickX() {
+        driver.findElement(popupX).click();
+    }
+}/*/
